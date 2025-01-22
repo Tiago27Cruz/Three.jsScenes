@@ -1,0 +1,5439 @@
+{
+    "yasf": {
+        "globals": {
+            "background": {
+                "r": 0.2,
+                "g": 0.2,
+                "b": 0.2
+            },
+            "ambient": {
+                "r": 0.7,
+                "g": 0.7,
+                "b": 0.7,
+                "intensity": 0.1
+            },
+            "fog": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "near": 10000.0,
+                "far": 10001.0
+            },
+            "skybox":{
+                "size":{
+                    "x": 400,
+                    "y": 200,
+                    "z": 500
+                },
+                "center":{
+                    "x":0,
+                    "y": 98,
+                    "z": 0
+                },
+                "emissive":{
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0 
+                },
+                "intensity": 0,
+                "front": "scenes/prowrestling/textures/front.jpg",
+                "back": "scenes/prowrestling/textures/front.jpg",
+                "up": "scenes/prowrestling/textures/top.jpg",
+                "down": "scenes/prowrestling/textures/floor.jpg",
+                "left": "scenes/prowrestling/textures/front.jpg",
+                "right": "scenes/prowrestling/textures/front.jpg"
+            }
+        },
+        "textures": {
+            "floortex": {
+                "filepath": "scenes/prowrestling/textures/floor.jpg",
+                "isVideo": false
+            },
+            "mattex": {
+                "filepath": "scenes/prowrestling/textures/mat.jpg",
+                "isVideo": false
+            },
+            "ropetex": {
+                "filepath": "scenes/prowrestling/textures/rope.jpg",
+                "isVideo": false
+            },
+            "steeltex": {
+                "filepath": "scenes/prowrestling/textures/steel.jpg",
+                "isVideo": false
+            },
+            "bumpsteeltex":{
+                "filepath": "scenes/prowrestling/textures/steelbump.jpg",
+                "isVideo": false
+            },
+            "padtex": {
+                "filepath": "scenes/prowrestling/textures/pad.jpg",
+                "isVideo": false
+            },
+            "turnbuckletex": {
+                "filepath": "scenes/prowrestling/textures/aew.jpg",
+                "isVideo": false,
+                "mipmap0": "scenes/prowrestling/textures/aew.jpg",
+                "mipmap1": "scenes/prowrestling/textures/aew2.jpg",
+                "mipmap2": "scenes/prowrestling/textures/aew3.jpg"
+            },
+            "outsidemattex": {
+                "filepath": "scenes/prowrestling/textures/outside_mat.jpg",
+                "isVideo": false
+            },
+            "aprontex": {
+                "filepath": "scenes/prowrestling/textures/apron.jpg",
+                "isVideo": false
+            },
+            "stopsigntex": {
+                "filepath": "scenes/prowrestling/textures/stopsign.jpg",
+                "isVideo": false
+            },
+            "blacksteeltex": {
+                "filepath": "scenes/prowrestling/textures/black_steel.jpg",
+                "isVideo": false
+            },
+            "rmysterio480tex":{
+                "filepath": "scenes/prowrestling/textures/rmysterio-480.mp4",
+                "isVideo": true
+            },
+            "barricadetex":{
+                "filepath": "scenes/prowrestling/textures/barricade.jpg",
+                "isVideo": false
+            },
+            "curtaintex": {
+                "filepath": "scenes/prowrestling/textures/ar_curtain.jpg",
+                "isVideo": false
+            },
+            "stagetex": {
+                "filepath": "scenes/prowrestling/textures/stage.jpg",
+                "isVideo": false
+            },
+            "bscurtaintex": {
+                "filepath": "scenes/prowrestling/textures/curtain.jpg",
+                "isVideo": false
+            },
+            "lamptex": {
+                "filepath": "scenes/prowrestling/textures/lamp.jpg",
+                "isVideo": false
+            },
+            "leftrendertex":{
+                "filepath": "scenes/prowrestling/textures/rmysteriorender.png",
+                "isVideo": false
+            },
+            "rightrendertex":{
+                "filepath": "scenes/prowrestling/textures/bryanrender.png",
+                "isVideo": false
+            }
+            
+        },
+        "materials": {
+            "backstagewallapp":{
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "bscurtaintex",
+                "texlength_s": 1,
+                "texlength_t": 1
+            },
+            "renderframeapp":{
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.2,
+                    "g": 0.2,
+                    "b": 0.2
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0
+            },
+            "leftrenderapp":{
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": true,
+                "opacity": 1.0,
+                "textureref": "leftrendertex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "wireframe": false
+            },
+            "gridboxapp":{
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": true,
+                "opacity": 1.0,
+                "wireframe": true
+            },
+            "rightrenderapp":{
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": true,
+                "opacity": 1.0,
+                "textureref": "rightrendertex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "wireframe": false
+            },
+            "matapp": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "mattex",
+                "texlength_s": 1,
+                "texlength_t": 1
+            },
+            "ropeapp": {
+                "color": {
+                    "r": 0.01,
+                    "g": 0.01,
+                    "b": 0.01
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "ropetex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "wireframe": false
+            },
+            "postapp": {
+                "color": {
+                    "r": 0.01,
+                    "g": 0.01,
+                    "b": 0.01
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "padtex",
+                "texlength_s": 1,
+                "texlength_t": 1
+            },
+            "turnbucklepadapp": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "turnbuckletex",
+                "texlength_s": 6.7,
+                "texlength_t": 1
+            },
+            "outsidematapp": {
+                "color": {
+                    "r": 0.2,
+                    "g": 0.2,
+                    "b": 0.2
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "outsidemattex",
+                "texlength_s": 1,
+                "texlength_t": 0.34,
+                "twosided": false
+            },
+            "stepsapp": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "steeltex",
+                "bumpref": "bumpsteeltex",
+                "bumpscale": 10,
+                "texlength_s": 1,
+                "texlength_t": 1
+            },
+            "floorapp": {
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "color": {
+                    "r": 0.8,
+                    "g": 0.8,
+                    "b": 0.8
+                },
+                "specular": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "shininess": 0.0,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "floortex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": true
+            },
+            "apronapp": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "aprontex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": true
+            },
+            "stopsignapp": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "stopsigntex",
+                "texlength_s": 6,
+                "texlength_t": 6
+            },
+            "lampapp": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "lamptex",
+                "texlength_s": 1,
+                "texlength_t": 1
+            },
+            "lamponapp": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "lamptex",
+                "texlength_s": 1,
+                "texlength_t": 1
+            },
+            "chairapp": {
+                "color": {
+                    "r": 0.2,
+                    "g": 0.2,
+                    "b": 0.2
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "blacksteeltex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": true
+            },
+            "rmysterioapp":{
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 0.2,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "rmysterio480tex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": false
+            },
+            "stageapp":{
+                "color": {
+                    "r": 0.3,
+                    "g": 0.3,
+                    "b": 0.3
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 1,
+                "transparent": false,
+                "textureref": "stagetex",
+                "texlength_s": 4,
+                "texlength_t": 2,
+                "opacity": 1.0,
+                "wireframe": false
+            },
+            "barricadeapp":{
+                "color": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 1,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "barricadetex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": false
+            },
+            "curtainapp":{
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 1,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "curtaintex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": true
+            }
+        },
+        "cameras": {
+            "initial": "cam1",
+            "cam1": {
+                "type": "perspective",
+                "angle": 60,
+                "near": 0.1,
+                "far": 1000,
+                "location": {
+                    "x": 150,
+                    "y": 30,
+                    "z": 0
+                },
+                "target": {
+                    "x": -100,
+                    "y": 30,
+                    "z": 0
+                }
+            },
+            "cam2": {
+                "type": "orthogonal",
+                "near": 0.1,
+                "far": 1000,
+                "location": {
+                    "x": 0,
+                    "y": 300,
+                    "z": 0
+                },
+                "target": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "left": -75,
+                "right": 75,
+                "bottom": -75,
+                "top": 75
+            }
+        },
+        "graph": {
+            "rootid": "scene",
+            "scene": {
+                "type": "node",
+                "children": {
+                    "nodesList": [
+                        "outsidemat",
+                        "crowdfloor",
+                        "audiencerow1",
+                        "audiencerow2",
+                        "audiencerow3",
+                        "bargate1",
+                        "bargate2",
+                        "bargate3",
+                        "bargate4",
+                        "bargate5",
+                        "bargate6",
+                        "bargate7",
+                        "bargate8",
+                        "bargate9",
+                        "bargate10",
+                        "bargate11",
+                        "bargate12",
+                        "bargate13",
+                        "bargatesEntrance2",
+                        "ring",
+                        "stage",
+                        "titantron",
+                        "backstagewall",
+                        "backstagewalltop",
+                        "bsrenderleft",
+                        "bsrenderright",
+                        "bswalllight",
+                        "bswalllight2",
+                        "walllight",
+                        "walllight2",
+                        "walllight3",
+                        "walllight4",
+                        "toplight",
+                        "stopsign",
+                        "lamp1",
+                        "lamp2",
+                        "lamp3",
+                        "lamp4",
+                        "lamp5",
+                        "lamp6",
+                        "lamp7",
+                        "gridboxes1",
+                        "gridboxes2",
+                        "gridboxes3",
+                        "gridboxes4",
+                        "gridboxes5",
+                        "gridboxes6"
+                    ]
+                }
+            },
+            "gridboxes1":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount":{
+                            "x": -185,
+                            "y": 0,
+                            "z": 92.5
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId": "gridboxapp"
+                },
+                "children":{
+                    "nodesList":[
+                        "gridbox1",
+                        "gridbox2",
+                        "gridbox3",
+                        "gridbox4",
+                        "gridbox5"
+                    ]
+                }
+
+            },
+            "gridboxes2":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount":{
+                            "x": -185,
+                            "y": 0,
+                            "z": 47
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId": "gridboxapp"
+                },
+                "children":{
+                    "nodesList":[
+                        "gridbox1",
+                        "gridbox2",
+                        "gridbox3",
+                        "gridbox4",
+                        "gridbox5"
+                    ]
+                }
+
+            },
+            "gridboxes3":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount":{
+                            "x": -185,
+                            "y": 0,
+                            "z": -47
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId": "gridboxapp"
+                },
+                "children":{
+                    "nodesList":[
+                        "gridbox1",
+                        "gridbox2",
+                        "gridbox3",
+                        "gridbox4",
+                        "gridbox5"
+                    ]
+                }
+
+            },
+            "gridboxes4":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount":{
+                            "x": -185,
+                            "y": 0,
+                            "z": -92.5
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId": "gridboxapp"
+                },
+                "children":{
+                    "nodesList":[
+                        "gridbox1",
+                        "gridbox2",
+                        "gridbox3",
+                        "gridbox4",
+                        "gridbox5"
+                    ]
+                }
+
+            },
+            "gridboxes5":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount":{
+                            "x": -185,
+                            "y": 77.5,
+                            "z": 44.5
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount":{
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount":{
+                            "x": 1,
+                            "y": 0.675,
+                            "z": 1
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId": "gridboxapp"
+                },
+                "children":{
+                    "nodesList":[
+                        "gridbox1",
+                        "gridbox2",
+                        "gridbox3",
+                        "gridbox4",
+                        "gridbox5"
+                    ]
+                }
+
+            },
+            "gridboxes6":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount":{
+                            "x": -185,
+                            "y": 77.5,
+                            "z": -95
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount":{
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount":{
+                            "x": 1,
+                            "y": 0.675,
+                            "z": 1
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId": "gridboxapp"
+                },
+                "children":{
+                    "nodesList":[
+                        "gridbox1",
+                        "gridbox2",
+                        "gridbox3",
+                        "gridbox4",
+                        "gridbox5"
+                    ]
+                }
+
+            },
+            "gridbox1":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "scale",
+                        "amount":{
+                            "x": 5,
+                            "y": 15,
+                            "z": 5
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "box"
+                    ]
+                }
+            },
+            "gridbox2":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount":{
+                            "x": 0,
+                            "y": 15,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount":{
+                            "x": 5,
+                            "y": 15,
+                            "z": 5
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "box"
+                    ]
+                }
+            },
+            "gridbox3":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount":{
+                            "x": 0,
+                            "y": 30,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount":{
+                            "x": 5,
+                            "y": 15,
+                            "z": 5
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "box"
+                    ]
+                }
+            },
+            "gridbox4":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount":{
+                            "x": 0,
+                            "y": 45,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount":{
+                            "x": 5,
+                            "y": 15,
+                            "z": 5
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "box"
+                    ]
+                }
+            },
+            "gridbox5":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount":{
+                            "x": 0,
+                            "y": 60,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount":{
+                            "x": 5,
+                            "y": 15,
+                            "z": 5
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "box"
+                    ]
+                }
+            },
+            "lamplight":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 1,
+                            "z": 0.55
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1.75,
+                            "y": 1,
+                            "z": 1.75
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId": "lampapp"
+                },
+                "children":{
+                    "nodesList":[
+                        "plane"
+                    ]
+                }
+            },
+            "lamplighton":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 1,
+                            "z": 0.55
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1.75,
+                            "y": 1,
+                            "z": 1.75
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId": "lamponapp"
+                },
+                "children":{
+                    "nodesList":[
+                        "plane"
+                    ]
+                }
+            },
+            "lampbox":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 2,
+                            "y": 2,
+                            "z": 1
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "chairapp"
+                },
+                "children":{
+                    "nodesList":[
+                        "box"
+                    ]
+                }
+            },
+            "lamp":{
+                "type": "node",
+                "children":{
+                    "nodesList":[
+                        "lampbox",
+                        "lamplight"
+                    ]
+                }
+            },
+            "lamp1":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -150,
+                            "y": 0,
+                            "z": 30
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -135,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 3,
+                            "y": 3,
+                            "z": 3
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "lamp"
+                    ]
+                }
+            },
+            "lamp2":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -140,
+                            "y": 0,
+                            "z": 23
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -111,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 2,
+                            "y": 2,
+                            "z": 3
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "lamp"
+                    ]
+                }
+            },
+            "lamp3":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -146,
+                            "y": 0,
+                            "z": 25
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -122,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 2,
+                            "y": 2,
+                            "z": 3
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "lamp"
+                    ]
+                }
+            },
+            "lamp4":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -146,
+                            "y": 0,
+                            "z": -25
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -24,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 5,
+                            "y": 3,
+                            "z": 3
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "lamp"
+                    ]
+                }
+            },
+            "lamp5":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -148,
+                            "y": 6,
+                            "z": -26
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -36,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 2.5
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "lamp"
+                    ]
+                }
+            },
+            "lamp6":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -157,
+                            "y": 0,
+                            "z": -23
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -36,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 2.5,
+                            "y": 2,
+                            "z": 3
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "lamp"
+                    ]
+                }
+            },
+            "lamp7":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -165,
+                            "y": 0,
+                            "z": -26
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -5,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1.5
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "lamp"
+                    ]
+                }
+            },
+            "stopsign":{
+                "type": "node",
+                "children":{
+                    "nodesList":[
+                        "stopsignboard",
+                        "stopsignhandle"
+                    ]
+                }
+            },
+            "stopsignboard": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -5,
+                            "y": 9.5,
+                            "z": -10
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -90,
+                            "y": 0,
+                            "z": 33
+                        }
+                    }
+                ],
+                
+                "materialref":{
+                    "materialId": "stopsignapp"
+                },
+                "children": {
+                    "polygonPrim": {
+                        "type": "polygon",
+                        "radius": 3,
+                        "stacks": 3,
+                        "slices": 8,
+                        "color_c": {
+                            "r": 0.8,
+                            "g": 0.8,
+                            "b": 0.8
+                        },
+                        "color_p": {
+                            "r": 0.3,
+                            "g": 0,
+                            "b": 0
+                        }
+                    }
+                }
+            },
+            "stopsignhandle":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -2,
+                            "y": 9.5,
+                            "z": -3
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -90,
+                            "y": 0,
+                            "z": -13
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.2,
+                            "y": 5,
+                            "z": 0.2
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId": "barricadeapp"
+                },
+                "children": {
+                    "nodesList":[
+                        "cylinder"
+                    ]
+                }
+            },
+            "bargatesEntrance2":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -30
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate11",
+                        "bargate12",
+                        "bargate13"
+                    ]
+                }
+            },
+            "bargatesStage":{
+                "type": "node",
+                "children": {
+                    "nodesList": [
+                        "bargate14",
+                        "bargate15",
+                        "bargate16"
+                    ]
+                }
+            },
+            "bargatesStage2":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -116
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate14",
+                        "bargate15",
+                        "bargate16"
+                    ]
+                }
+            },
+            "bargate": {
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 46,
+                            "y": -1.4,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "barricadeapp"
+                },
+                "children": {
+                    "nodesList": [
+                        "barsgroup1",
+                        "barsgroup2",
+                        "barsgroup3",
+                        "barsgroup4",
+                        "barsgroup5",
+                        "barfootleft",
+                        "barfootbackleg",
+                        "barfootfrontleg",
+                        "bargatestandright",
+                        "barright",
+                        "bartop",
+                        "barleft",
+                        "barbottom"
+                    ]
+                }
+            },
+            "bargate1": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -35.2,
+                            "y": 0,
+                            "z": -37
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -129,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate"
+                    ]
+                }
+            },
+            "bargate2": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -29,
+                            "y": 0,
+                            "z": -40
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate"
+                    ]
+                }
+            },
+            "bargate3": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -2,
+                            "y": 0,
+                            "z": -40
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate"
+                    ]
+                }
+            },
+            "bargate4": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 25,
+                            "y": 0,
+                            "z": -38
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -45,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate"
+                    ]
+                }
+            },
+            "bargate5": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 42.6775,
+                            "y": 0,
+                            "z": 4
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate"
+                    ]
+                }
+            },
+            "bargate6": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 42.6775,
+                            "y": 0,
+                            "z": 30
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate"
+                    ]
+                }
+            },
+            "bargate7": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 19,
+                            "y": 0,
+                            "z": 41
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 20,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate"
+                    ]
+                }
+            },
+            "bargate8": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -8,
+                            "y": 0,
+                            "z": 42
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate"
+                    ]
+                }
+            },
+            "bargate9": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -35,
+                            "y": 0,
+                            "z": 42
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate"
+                    ]
+                }
+            },
+            "bargate10": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -41.5,
+                            "y": 0,
+                            "z": 38
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 110,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate"
+                    ]
+                }
+            },
+            "bargate11": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -75,
+                            "y": 0,
+                            "z": 13
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate"
+                    ]
+                }
+            },
+            "bargate12": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -102,
+                            "y": 0,
+                            "z": 13
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate"
+                    ]
+                }
+            },
+            "bargate13": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -129,
+                            "y": 0,
+                            "z": 13
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate"
+                    ]
+                }
+            },
+            "bargate14": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -130.5,
+                            "y": 0,
+                            "z": 40
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate"
+                    ]
+                }
+            },
+            "bargate15": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -130.5,
+                            "y": 0,
+                            "z": 67
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate"
+                    ]
+                }
+            },
+            "bargate16": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -130.5,
+                            "y": 0,
+                            "z": 94
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bargate"
+                    ]
+                }
+            },
+            "bargatestandright": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 24.5,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "barfootleft",
+                        "barfootbackleg",
+                        "barfootfrontleg"
+                    ]
+                }
+            },
+            "barfootleft": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -47.66,
+                            "y": 3,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.45,
+                            "y": 4,
+                            "z": 0.45
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "cylinder"
+                    ]
+                }
+            },
+            "barfootbackleg": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -47.66,
+                            "y": 2.3,
+                            "z": -2.4
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 45,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.45,
+                            "y": 2,
+                            "z": 0.45
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "cylinder"
+                    ]
+                }
+            },
+            "barfootfrontleg": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "barfootbackleg"
+                    ]
+                }
+            },
+            "barleft":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -47.65,
+                            "y": 8.25,
+                            "z": 0.03
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.35,
+                            "y": 10,
+                            "z": 0.35
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "cylinder"
+                    ]
+                }
+            },
+            "barright": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 24.5,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "barleft"
+                    ]
+                }
+            },
+            "barbottom":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -35.4,
+                            "y": 4.9,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 90
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.35,
+                            "y": 23.8,
+                            "z": 0.35
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "cylinder"
+                    ]
+                }
+            },
+            "bartop": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 8,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "barbottom"
+                    ]
+                }
+            },
+            "barsgrouplod1":{
+                "type": "node",
+                "children":{
+                    "nodesList":[
+                        "bars",
+                        "bars2",
+                        "bars3"
+                    ]
+                }
+            },
+            "barsgrouplod2":{
+                "type": "node",
+                "children":{
+                    "nodesList":[
+                        "bars",
+                        "bars3"
+                    ]
+                }
+            },
+            "barsgroup":{
+                "type": "lod",
+                "lodNodes":[
+                    {
+                        "nodeId":"barsgrouplod1",
+                        "mindist": 0
+                    },
+                    {
+                        "nodeId":"barsgrouplod2",
+                        "mindist": 50
+                    }
+                ]
+            },
+            "barsgroup1": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -46,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bars",
+                        "bars2",
+                        "bars3"
+                    ]
+                }
+            },
+            "barsgroup2": {
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 4.6,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "type": "node",
+                "children": {
+                    "nodesList": [
+                        "barsgroup1"
+                    ]
+                }
+            },
+            "barsgroup3": {
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 4.6,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "type": "node",
+                "children": {
+                    "nodesList": [
+                        "barsgroup2"
+                    ]
+                }
+            },
+            "barsgroup4": {
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 4.6,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "type": "node",
+                "children": {
+                    "nodesList": [
+                        "barsgroup3"
+                    ]
+                }
+            },
+            "barsgroup5": {
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 4.6,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "type": "node",
+                "children": {
+                    "nodesList": [
+                        "barsgroup4"
+                    ]
+                }
+            },
+            "bars": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 8.9,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.3,
+                            "y": 7.5,
+                            "z": 0.3
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList":[
+                        "cylinder"
+                    ]
+                }
+            },
+            "bars2": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 1.5,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bars"
+                    ]
+                }
+            },
+            "bars3": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 1.5,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bars2"
+                    ]
+                }
+            },
+            "ring": {
+                "type": "node",
+                "castshadows": true,
+                "receiveshadows": true,
+                "children": {
+                    "nodesList": [
+                        "mat",
+                        "ringpost1",
+                        "ringpost2",
+                        "ringpost3",
+                        "ringpost4",
+                        "ropestop",
+                        "ropesleft",
+                        "ropesright",
+                        "ropesbottom",
+                        "steps1",
+                        "steps2",
+                        "apronback",
+                        "apronfront",
+                        "apronleft",
+                        "apronright"
+                    ]
+                }
+            },
+            "apronback": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -20.05
+                        }
+                    }
+                ],
+                "children": {
+                    "lodsList": [
+                        "apron"
+                    ]
+                }
+            },
+            "apronfront": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 20.05
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 180,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "lodsList": [
+                        "apron"
+                    ]
+                }
+            },
+            "apronleft": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -20.05,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "lodsList": [
+                        "apron"
+                    ]
+                }
+            },
+            "apronright": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 20.05,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "lodsList": [
+                        "apron"
+                    ]
+                }
+            },
+            "apron" :{
+                "type": "lod",
+                "lodNodes": [
+                    {
+                        "nodeId": "apron1",
+                        "mindist": 0
+                    },
+                    {
+                        "nodeId": "apron2",
+                        "mindist": 20
+                    }
+                ]
+            },
+            "apron1": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -18,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "apronapp"
+                },
+                "children": {
+                    "apronPrim": {
+                        "type": "nurbs",
+                        "degree_u": 5,
+                        "degree_v": 3,
+                        "parts_u": 16,
+                        "parts_v": 8,
+                        "controlpoints": [
+                            {
+                                "x": 0.0,
+                                "y": 9.25,
+                                "z": 0
+                            },
+                            {
+                                "x": 0.0,
+                                "y": 2.3125,
+                                "z": 0.261599702701384
+                            },
+                            {
+                                "x": 0.0,
+                                "y": 6.9375,
+                                "z": 0.3412183325980623
+                            },
+                            {
+                                "x": 0.0,
+                                "y": 0,
+                                "z": 0.4
+                            },
+                            {
+                                "x": 7.2,
+                                "y": 9.25,
+                                "z": 0
+                            },
+                            {
+                                "x": 7.2,
+                                "y": 2.3125,
+                                "z": 0.10337012740205163
+                            },
+                            {
+                                "x": 7.2,
+                                "y": 6.9375,
+                                "z": 0.0841692981411406
+                            },
+                            {
+                                "x": 7.2,
+                                "y": 0,
+                                "z": 0.12360679774997899
+                            },
+                            {
+                                "x": 14.4,
+                                "y": 9.25,
+                                "z": 0
+                            },
+                            {
+                                "x": 14.4,
+                                "y": 2.3125,
+                                "z": -0.2701769232195081
+                            },
+                            {
+                                "x": 14.4,
+                                "y": 6.9375,
+                                "z": -0.22177794189065253
+                            },
+                            {
+                                "x": 14.4,
+                                "y": 0,
+                                "z": -0.32360679774997897
+                            },
+                            {
+                                "x": 21.599999999999998,
+                                "y": 9.25,
+                                "z": 0
+                            },
+                            {
+                                "x": 21.599999999999998,
+                                "y": 2.3125,
+                                "z": -0.28476430256341906
+                            },
+                            {
+                                "x": 21.599999999999998,
+                                "y": 6.9375,
+                                "z": -0.2036295153576156
+                            },
+                            {
+                                "x": 21.599999999999998,
+                                "y": 0,
+                                "z": -0.323606797749979
+                            },
+                            {
+                                "x": 28.8,
+                                "y": 9.25,
+                                "z": 0
+                            },
+                            {
+                                "x": 28.8,
+                                "y": 2.3125,
+                                "z": 0.08864787662566892
+                            },
+                            {
+                                "x": 28.8,
+                                "y": 6.9375,
+                                "z": 0.1233976236530541
+                            },
+                            {
+                                "x": 28.8,
+                                "y": 0,
+                                "z": 0.1236067977499789
+                            },
+                            {
+                                "x": 36.0,
+                                "y": 9.25,
+                                "z": 0
+                            },
+                            {
+                                "x": 36.0,
+                                "y": 2.3125,
+                                "z": 0.31188042253906156
+                            },
+                            {
+                                "x": 36.0,
+                                "y": 6.9375,
+                                "z": 0.24358054991389075
+                            },
+                            {
+                                "x": 36.0,
+                                "y": 0,
+                                "z": 0.4
+                            }
+                        ]
+                    }
+                }
+            },
+            "apron2":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 4.55,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 180,
+                            "y": 180,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 36,
+                            "y": 9.5,
+                            "z": 1
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "apronapp"
+                },
+                "children":{
+                    "planePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": -0.5,
+                            "y": -0.5
+                        },
+                        "xy2": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    }
+                }
+            },
+            "ropestop": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -17
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "ropes"
+                    ]
+                }
+            },
+            "ropesleft": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -17,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "ropes"
+                    ]
+                }
+            },
+            "ropesright": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 17,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "ropes"
+                    ]
+                }
+            },
+            "ropesbottom": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 17
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "ropes"
+                    ]
+                }
+            },
+            "ropes": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "ropeapp"
+                },
+                "children": {
+                    "nodesList": [
+                        "ropetop",
+                        "ropemid",
+                        "ropebottom"
+                    ]
+                }
+            },
+            "ropetop": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 21,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 90
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.3,
+                            "y": 31,
+                            "z": 0.3
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "cylinder"
+                    ]
+                }
+            },
+            "ropemid": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 17,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 90
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.3,
+                            "y": 31,
+                            "z": 0.3
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "cylinder"
+                    ]
+                }
+            },
+            "ropebottom": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 13,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 90
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.3,
+                            "y": 31,
+                            "z": 0.3
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "cylinder"
+                    ]
+                }
+            },
+            "ringpost1": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -19,
+                            "y": 0,
+                            "z": -19
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "ringpost"
+                    ]
+                }
+            },
+            "ringpost2": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 19,
+                            "y": 0,
+                            "z": -19
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "ringpost"
+                    ]
+                }
+            },
+            "ringpost3": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 19,
+                            "y": 0,
+                            "z": 19
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 180,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "ringpost"
+                    ]
+                }
+            },
+            "ringpost4": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -19,
+                            "y": 0,
+                            "z": 19
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "ringpost"
+                    ]
+                }
+            },
+            "ringpost": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "postapp"
+                },
+                "children": {
+                    "nodesList": [
+                        "post",
+                        "turnbuckletop",
+                        "turnbucklemiddle",
+                        "turnbucklebottom"
+                    ]
+                }
+            },
+            "post": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 2,
+                            "y": 22,
+                            "z": 2
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "postapp"
+                },
+                "children": {
+                    "boxPrim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -0.5,
+                            "y": 0,
+                            "z": -0.5
+                        },
+                        "xyz2": {
+                            "x": 0.5,
+                            "y": 1,
+                            "z": 0.5
+                        }
+                    }
+                }
+            },
+            "turnbuckletop": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0.7,
+                            "y": 21,
+                            "z": 0.7
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 45,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "turnbuckle_connector",
+                        "turnbuckle_pad"
+                    ]
+                }
+            },
+            "turnbucklemiddle": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0.7,
+                            "y": 17,
+                            "z": 0.7
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 45,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "turnbuckle_connector",
+                        "turnbuckle_pad"
+                    ]
+                }
+            },
+            "turnbucklebottom": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0.7,
+                            "y": 13,
+                            "z": 0.7
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 45,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "turnbuckle_connector",
+                        "turnbuckle_pad"
+                    ]
+                }
+            },
+            "turnbuckle_connector": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 1.5
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.3,
+                            "y": 3,
+                            "z": 0.3
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "cylinder"
+                    ]
+                }
+            },
+            "turnbuckle_pad": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "turnbucklepadapp"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 3
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1.5,
+                            "y": 1,
+                            "z": 0.7
+                        }
+                    }
+                ],
+                "children": {
+                    "spherePrim": {
+                        "type": "sphere",
+                        "radius": 1,
+                        "slices": 10,
+                        "stacks": 10
+                    }
+                }
+            },
+            "mat": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 9,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 40,
+                            "y": 0.3,
+                            "z": 40
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "matapp"
+                },
+                "children": {
+                    "boxPrim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -0.5,
+                            "y": 0,
+                            "z": -0.5
+                        },
+                        "xyz2": {
+                            "x": 0.5,
+                            "y": 1,
+                            "z": 0.5
+                        }
+                    }
+                }
+            },
+            "steps1": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -17.5,
+                            "y": 0,
+                            "z": -17.5
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -45,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "steps"
+                    ]
+                }
+            },
+            "steps2": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 17.5,
+                            "y": 0,
+                            "z": 17.5
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 135,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "steps"
+                    ]
+                }
+            },
+            "steps": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "stepsapp"
+                },
+                "children": {
+                    "nodesList": [
+                        "stepshigh",
+                        "stepsmiddle",
+                        "stepslow"
+                    ]
+                }
+            },
+            "stepshigh": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -3.5,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 7,
+                            "y": 7.5,
+                            "z": 7
+                        }
+                    }
+                ],
+                "children": {
+                    "boxPrim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -0.5,
+                            "y": 0,
+                            "z": -0.5
+                        },
+                        "xyz2": {
+                            "x": 0.5,
+                            "y": 1,
+                            "z": 0.5
+                        }
+                    }
+                }
+            },
+            "stepsmiddle": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -8.5,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 3,
+                            "y": 5,
+                            "z": 7
+                        }
+                    }
+                ],
+                "children": {
+                    "boxPrim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -0.5,
+                            "y": 0,
+                            "z": -0.5
+                        },
+                        "xyz2": {
+                            "x": 0.5,
+                            "y": 1,
+                            "z": 0.5
+                        }
+                    }
+                }
+            },
+            "stepslow": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -11.25,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 3,
+                            "y": 2.5,
+                            "z": 7
+                        }
+                    }  
+                ],
+                "children": {
+                    "boxPrim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -0.5,
+                            "y": 0,
+                            "z": -0.5
+                        },
+                        "xyz2": {
+                            "x": 0.5,
+                            "y": 1,
+                            "z": 0.5
+                        }
+                    }
+                }
+            },
+            "outsidemat": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0.1,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 80,
+                            "y": 80,
+                            "z": 80
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "outsidematapp"
+                },
+                "children": {
+                    "planePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": -0.5,
+                            "y": -0.5
+                        },
+                        "xy2": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    }
+                }
+            },
+            "crowdfloor": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -45,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 285,
+                            "y": 200,
+                            "z": 1
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "floorapp"
+                },
+                "children": {
+                    "planePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": -0.5,
+                            "y": -0.5
+                        },
+                        "xy2": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    }
+                }
+            },
+            "audiencerow3": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 50
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 180,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId": "rmysterioapp"
+                },
+                "children": {
+                    "nodesList": [
+                        "chairrow1",
+                        "chairrow2"
+                    ]
+                }
+            },
+            "audiencerow2": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 51,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId": "chairapp"
+                },
+                "children": {
+                    "nodesList": [
+                        "chairrow1",
+                        "chairrow2"
+                    ]
+                }
+            },
+            "audiencerow1": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -51
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId": "chairapp"
+                },
+                "children": {
+                    "nodesList": [
+                        "chairrow1",
+                        "chairrow2"
+                    ]
+                }
+            },
+            "chairrow3": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -24
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "chair1",
+                        "chair2",
+                        "chair3",
+                        "chair4",
+                        "chair5",
+                        "chair6",
+                        "chair7"
+                    ]
+                }
+            },
+            "chairrow2": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -12
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "chair1",
+                        "chair2",
+                        "chair3",
+                        "chair4",
+                        "chair5",
+                        "chair6",
+                        "chair7"
+                    ]
+                }
+            },
+            "chairrow1": {
+                "type": "node",
+                "children": {
+                    "nodesList": [
+                        "chair1",
+                        "chair2",
+                        "chair3",
+                        "chair4",
+                        "chair5",
+                        "chair6",
+                        "chair7"
+                    ]
+                }
+            },
+            "chair9": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -32,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "rightbacklegchair",
+                        "leftbacklegchair",
+                        "chairseat",
+                        "leftfrontlegchair",
+                        "rightfrontlegchair",
+                        "topconnectorchair",
+                        "backconnectorchair",
+                        "frontconnectorchair"
+                    ],
+                    "lodsList":[
+                        "backrestchair"
+                    ]
+                }
+            },
+            "chair8": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 32,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "rightbacklegchair",
+                        "leftbacklegchair",
+                        "chairseat",
+                        "leftfrontlegchair",
+                        "rightfrontlegchair",
+                        "topconnectorchair",
+                        "backconnectorchair",
+                        "frontconnectorchair"
+                    ],
+                    "lodsList":[
+                        "backrestchair"
+                    ]
+                }
+            },
+            "chair7": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -24,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "rightbacklegchair",
+                        "leftbacklegchair",
+                        "chairseat",
+                        "leftfrontlegchair",
+                        "rightfrontlegchair",
+                        "topconnectorchair",
+                        "backconnectorchair",
+                        "frontconnectorchair"
+                    ],
+                    "lodsList":[
+                        "backrestchair"
+                    ]
+                }
+            },
+            "chair6": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 24,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "rightbacklegchair",
+                        "leftbacklegchair",
+                        "chairseat",
+                        "leftfrontlegchair",
+                        "rightfrontlegchair",
+                        "topconnectorchair",
+                        "backconnectorchair",
+                        "frontconnectorchair"
+                    ],
+                    "lodsList":[
+                        "backrestchair"
+                    ]
+                }
+            },
+            "chair5": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 16,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "rightbacklegchair",
+                        "leftbacklegchair",
+                        "chairseat",
+                        "leftfrontlegchair",
+                        "rightfrontlegchair",
+                        "topconnectorchair",
+                        "backconnectorchair",
+                        "frontconnectorchair"
+                    ],
+                    "lodsList":[
+                        "backrestchair"
+                    ]
+                }
+            },
+            "chair4": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 8,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "rightbacklegchair",
+                        "leftbacklegchair",
+                        "chairseat",
+                        "leftfrontlegchair",
+                        "rightfrontlegchair",
+                        "topconnectorchair",
+                        "backconnectorchair",
+                        "frontconnectorchair"
+                    ],
+                    "lodsList":[
+                        "backrestchair"
+                    ]
+                }
+            },
+            "chair3": {
+                "type": "node",
+                "children": {
+                    "nodesList": [
+                        "rightbacklegchair",
+                        "leftbacklegchair",
+                        "chairseat",
+                        "leftfrontlegchair",
+                        "rightfrontlegchair",
+                        "topconnectorchair",
+                        "backconnectorchair",
+                        "frontconnectorchair"
+                    ],
+                    "lodsList":[
+                        "backrestchair"
+                    ]
+                }
+            },
+            "chair2": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -8,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "rightbacklegchair",
+                        "leftbacklegchair",
+                        "chairseat",
+                        "leftfrontlegchair",
+                        "rightfrontlegchair",
+                        "topconnectorchair",
+                        "backconnectorchair",
+                        "frontconnectorchair"
+                    ],
+                    "lodsList":[
+                        "backrestchair"
+                    ]
+                }
+            },
+            "chair1": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -16,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "rightbacklegchair",
+                        "leftbacklegchair",
+                        "chairseat",
+                        "leftfrontlegchair",
+                        "rightfrontlegchair",
+                        "topconnectorchair",
+                        "backconnectorchair",
+                        "frontconnectorchair"
+                    ],
+                    "lodsList":[
+                        "backrestchair"
+                    ]
+                }
+            },
+            "backrestchair":{
+                "type": "lod",
+                "lodNodes":[
+                    {
+                        "nodeId": "backrestchairlod1",
+                        "mindist": 0
+                    },
+                    {
+                        "nodeId": "backrestchairlod2",
+                        "mindist": 20
+                    }
+                ]
+            },
+            "backrestchairlod1": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -2.35,
+                            "y": 5.85,
+                            "z": -1.2
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -33.75,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "backrest": {
+                        "type": "nurbs",
+                        "degree_u": 5,
+                        "degree_v": 3,
+                        "parts_u": 16,
+                        "parts_v": 8,
+                        "controlpoints": [
+                            {
+                                "x": 0.0,
+                                "y": 2.5,
+                                "z": 0
+                            },
+                            {
+                                "x": 0.0,
+                                "y": 1.6666666666666667,
+                                "z": -0.0
+                            },
+                            {
+                                "x": 0.0,
+                                "y": 0.8333333333333334,
+                                "z": -0.0
+                            },
+                            {
+                                "x": 0.0,
+                                "y": 0,
+                                "z": -0.0
+                            },
+                            {
+                                "x": 0.9800000000000001,
+                                "y": 2.5,
+                                "z": 0
+                            },
+                            {
+                                "x": 0.9800000000000001,
+                                "y": 1.6666666666666667,
+                                "z": -0.28801477362331185
+                            },
+                            {
+                                "x": 0.9800000000000001,
+                                "y": 0.8333333333333334,
+                                "z": -0.5760295472466237
+                            },
+                            {
+                                "x": 0.9800000000000001,
+                                "y": 0,
+                                "z": -0.8640443208699355
+                            },
+                            {
+                                "x": 1.9600000000000002,
+                                "y": 2.5,
+                                "z": 0
+                            },
+                            {
+                                "x": 1.9600000000000002,
+                                "y": 1.6666666666666667,
+                                "z": -0.46601769298462525
+                            },
+                            {
+                                "x": 1.9600000000000002,
+                                "y": 0.8333333333333334,
+                                "z": -0.9320353859692505
+                            },
+                            {
+                                "x": 1.9600000000000002,
+                                "y": 0,
+                                "z": -1.3980530789538756
+                            },
+                            {
+                                "x": 2.94,
+                                "y": 2.5,
+                                "z": 0
+                            },
+                            {
+                                "x": 2.94,
+                                "y": 1.6666666666666667,
+                                "z": -0.46601769298462536
+                            },
+                            {
+                                "x": 2.94,
+                                "y": 0.8333333333333334,
+                                "z": -0.9320353859692507
+                            },
+                            {
+                                "x": 2.94,
+                                "y": 0,
+                                "z": -1.3980530789538759
+                            },
+                            {
+                                "x": 3.9200000000000004,
+                                "y": 2.5,
+                                "z": 0
+                            },
+                            {
+                                "x": 3.9200000000000004,
+                                "y": 1.6666666666666667,
+                                "z": -0.2880147736233119
+                            },
+                            {
+                                "x": 3.9200000000000004,
+                                "y": 0.8333333333333334,
+                                "z": -0.5760295472466238
+                            },
+                            {
+                                "x": 3.9200000000000004,
+                                "y": 0,
+                                "z": -0.8640443208699357
+                            },
+                            {
+                                "x": 4.9,
+                                "y": 2.5,
+                                "z": 0
+                            },
+                            {
+                                "x": 4.9,
+                                "y": 1.6666666666666667,
+                                "z": -6.000769315822031e-17
+                            },
+                            {
+                                "x": 4.9,
+                                "y": 0.8333333333333334,
+                                "z": -1.2001538631644062e-16
+                            },
+                            {
+                                "x": 4.9,
+                                "y": 0,
+                                "z": -1.8002307947466092e-16
+                            }
+                        ]
+                    }
+                }
+            },
+            "backrestchairlod2":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 5.85,
+                            "z": -1.2
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -33.75,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount":{
+                            "x": 5,
+                            "y": 2.5,
+                            "z": 0.25
+                        }
+                    }
+                ],
+                "children":{
+                    "boxPrim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -0.5,
+                            "y": 0,
+                            "z": -0.5
+                        },
+                        "xyz2": {
+                            "x": 0.5,
+                            "y": 1,
+                            "z": 0.5
+                        }
+                    }
+                }
+            },
+            "frontconnectorchair":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 1.825,
+                            "z": 1.45
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 90
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.15,
+                            "y": 5,
+                            "z": 0.15
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "cylinder"
+                    ]
+                }
+            },
+            "backconnectorchair": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -3.55
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "frontconnectorchair"
+                    ]
+                }
+            },
+            "topconnectorchair": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 6,
+                            "z": -4
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "frontconnectorchair"
+                    ]
+                }
+            },
+            "rightfrontlegchair": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 2.5,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "frontlegchair"
+                    ]
+                }
+            },
+            "leftfrontlegchair": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -2.5,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "frontlegchair"
+                    ]
+                }
+            },
+            "frontlegchair": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 4,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -33.75,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.15,
+                            "y": 9.5,
+                            "z": 0.15
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "cylinder"
+                    ]
+                }
+            },
+            "chairseat": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 3,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 4.7,
+                            "y": 0.5,
+                            "z": 4.3
+                        }
+                    }
+                ],
+                "children": {
+                    "boxPrim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -0.5,
+                            "y": 0,
+                            "z": -0.5
+                        },
+                        "xyz2": {
+                            "x": 0.5,
+                            "y": 1,
+                            "z": 0.5
+                        }
+                    }
+                }
+            },
+            "rightbacklegchair": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 2.5,
+                            "y": 0,
+                            "z": -2.5
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "backlegchair"
+                    ]
+                }
+            },
+            "leftbacklegchair": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -2.5,
+                            "y": 0,
+                            "z": -2.5
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "backlegchair"
+                    ]
+                }
+            },
+            "backlegchair": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 2.97,
+                            "z": 0.6
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 11.244296729442407,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.15,
+                            "y": 6,
+                            "z": 0.15
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "cylinder"
+                    ]
+                }
+            },
+            "stage":{
+                "type": "node",
+                "materialref": {
+                    "materialId": "stageapp"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -182.5,
+                            "y": 0,
+                            "z": -2
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "stageplatform",
+                        "stagestep",
+                        "stagepillarleft",
+                        "stagepillarright",
+                        "stagetop"
+                    ],
+                    "lodsList":[
+                        "stagecurtain"
+                    ]
+                }
+            },
+            "stageplatform":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 10,
+                            "y": 8,
+                            "z": 30
+                        }
+                    }
+                ],
+                "children": {
+                    "boxPrim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -0.5,
+                            "y": 0,
+                            "z": -0.5
+                        },
+                        "xyz2": {
+                            "x": 0.5,
+                            "y": 1,
+                            "z": 0.5
+                        }
+                    }
+                }
+            },
+            "stagestep":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 7,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 4,
+                            "y": 4,
+                            "z": 30
+                        }
+                    }
+                ],
+                "children": {
+                    "boxPrim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -0.5,
+                            "y": 0,
+                            "z": -0.5
+                        },
+                        "xyz2": {
+                            "x": 0.5,
+                            "y": 1,
+                            "z": 0.5
+                        }
+                    }
+                }
+            },
+            "stagepillar":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -1,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 8,
+                            "y": 50,
+                            "z": 8
+                        }
+                    }
+                ],
+                "children": {
+                    "boxPrim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -0.5,
+                            "y": 0,
+                            "z": -0.5
+                        },
+                        "xyz2": {
+                            "x": 0.5,
+                            "y": 1,
+                            "z": 0.5
+                        }
+                    }
+                }
+            },
+            "stagepillarleft":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 19
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "stagepillar"
+                    ]
+                }
+            },
+            "stagepillarright":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -19
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "stagepillar"
+                    ]
+                }
+            },
+            "stagetop":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -1,
+                            "y": 45,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 8,
+                            "y": 5,
+                            "z": 30
+                        }
+                    }
+                ],
+                "children": {
+                    "boxPrim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -0.5,
+                            "y": 0,
+                            "z": -0.5
+                        },
+                        "xyz2": {
+                            "x": 0.5,
+                            "y": 1,
+                            "z": 0.5
+                        }
+                    }
+                }
+            },
+            "stagecurtain":{
+                "type": "lod",
+                "lodNodes":[
+                    {
+                        "nodeId": "stagecurtain1",
+                        "mindist": 0
+                    },
+                    {
+                        "nodeId": "stagecurtain2",
+                        "mindist": 20
+                    }
+                    
+                ]
+            },
+            "stagecurtain1":{
+                "type": "node",
+                "materialref": {
+                    "materialId": "curtainapp"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -4.2,
+                            "y": 8,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "apronPrim": {
+                        "type": "nurbs",
+                        "degree_u": 4,
+                        "degree_v": 3,
+                        "parts_u": 16,
+                        "parts_v": 8,
+                        "controlpoints": [
+                            {
+                                "x": 0.0,
+                                "y": 38,
+                                "z": 0
+                            },
+                            {
+                                "x": 0.0,
+                                "y": 9.5,
+                                "z": 0.32575897727715925
+                            },
+                            {
+                                "x": 0.0,
+                                "y": 28.5,
+                                "z": 0.2733896277673433
+                            },
+                            {
+                                "x": 0.0,
+                                "y": 0,
+                                "z": 0.4
+                            },
+                            {
+                                "x": 7.5,
+                                "y": 38,
+                                "z": 0
+                            },
+                            {
+                                "x": 7.5,
+                                "y": 9.5,
+                                "z": -0.1424209255604165
+                            },
+                            {
+                                "x": 7.5,
+                                "y": 28.5,
+                                "z": -0.0995002492759555
+                            },
+                            {
+                                "x": 7.5,
+                                "y": 0,
+                                "z": -0.1530733729460359
+                            },
+                            {
+                                "x": 15.0,
+                                "y": 38,
+                                "z": 0
+                            },
+                            {
+                                "x": 15.0,
+                                "y": 9.5,
+                                "z": -0.248481625485714
+                            },
+                            {
+                                "x": 15.0,
+                                "y": 28.5,
+                                "z": -0.2672946255342232
+                            },
+                            {
+                                "x": 15.0,
+                                "y": 0,
+                                "z": -0.28284271247461906
+                            },
+                            {
+                                "x": 22.5,
+                                "y": 38,
+                                "z": 0
+                            },
+                            {
+                                "x": 22.5,
+                                "y": 9.5,
+                                "z": 0.3561442472197272
+                            },
+                            {
+                                "x": 22.5,
+                                "y": 28.5,
+                                "z": 0.3386584927263379
+                            },
+                            {
+                                "x": 22.5,
+                                "y": 0,
+                                "z": 0.3695518130045146
+                            },
+                            {
+                                "x": 30.0,
+                                "y": 38,
+                                "z": 0
+                            },
+                            {
+                                "x": 30.0,
+                                "y": 9.5,
+                                "z": 1.0762849725956981e-16
+                            },
+                            {
+                                "x": 30.0,
+                                "y": 28.5,
+                                "z": 1.0717130798296305e-16
+                            },
+                            {
+                                "x": 30.0,
+                                "y": 0,
+                                "z": 1.2246467991473532e-16
+                            }
+                        ]
+                    }
+                }
+            },
+            "stagecurtain2":{
+                "type": "node",
+                "materialref": {
+                    "materialId": "curtainapp"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -4.6,
+                            "y": 28,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -90,
+                            "y": 180,
+                            "z": 90
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 30,
+                            "y": 1,
+                            "z": 40
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "plane"
+                    ]
+                }
+            },
+            "titantron":{
+                "type": "node",
+                "materialref": {
+                    "materialId": "rmysterioapp"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -186.9,
+                            "y": 70,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 70,
+                            "y": 30,
+                            "z": 1
+                        }
+                    }
+                ],
+                "children": {
+                    "planePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": -0.5,
+                            "y": -0.5
+                        },
+                        "xy2": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    },
+                    "spotlight":{
+                        "type": "spotlight",
+                        "enabled": true,
+                        "angle": 50,
+                        "color": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0
+                        },
+                        "intensity": 50.0,
+                        "distance": 100,
+                        "decay": 1.0,
+                        "castshadow": false,
+                        "position": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 40
+                        },
+                        "target": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -1
+                        }
+                    }
+                }
+            },
+            "backstagewalltop":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -194,
+                            "y": 92,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 13,
+                            "y": 500,
+                            "z": 1
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId": "backstagewallapp"
+                },
+                "children": {
+                    "planePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": -0.5,
+                            "y": -0.5
+                        },
+                        "xy2": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    }
+                }
+            },
+            "backstagewall":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -187.5,
+                            "y": 45,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 500,
+                            "y": 95,
+                            "z": 1
+                        }
+                    }
+                    
+                ],
+                "materialref":{
+                    "materialId": "backstagewallapp"
+                },
+                "children": {
+                    "planePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": -0.5,
+                            "y": -0.5
+                        },
+                        "xy2": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    }
+                }
+            },
+            "bsrenderright":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -187.4,
+                            "y": 45,
+                            "z": -70
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 40,
+                            "y": 60,
+                            "z": 1
+                        }
+                    }              
+                ],
+                "children":{
+                    "nodesList":[
+                        "bswrestlerright",
+                        "bsframe"
+                    ],
+                    "spotlight":{
+                        "type": "spotlight",
+                        "enabled": true,
+                        "angle": 60,
+                        "color": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0
+                        },
+                        "intensity": 50.0,
+                        "distance": 100,
+                        "decay": 1.0,
+                        "castshadow": false,
+                        "position": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 40
+                        },
+                        "target": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -1
+                        }
+                    }
+                }
+            },
+            "bsrenderleft":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -187.4,
+                            "y": 45,
+                            "z": 70
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 40,
+                            "y": 60,
+                            "z": 1
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "bswrestlerleft",
+                        "bsframe"
+                    ],
+                    "spotlight":{
+                        "type": "spotlight",
+                        "enabled": true,
+                        "angle": 60,
+                        "color": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0
+                        },
+                        "intensity": 50.0,
+                        "distance": 100,
+                        "decay": 1.0,
+                        "castshadow": false,
+                        "position": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 40
+                        },
+                        "target": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -1
+                        }
+                    }
+                }
+            },
+            "bsframe":{
+                "type": "node",
+                "materialref":{
+                    "materialId": "renderframeapp"
+                },
+                "children": {
+                    "planePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": -0.5,
+                            "y": -0.5
+                        },
+                        "xy2": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    }
+                }
+            },
+            "bswrestlerleft":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0.5
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId": "leftrenderapp"
+                },
+                "children": {
+                    "planePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": -0.5,
+                            "y": -0.5
+                        },
+                        "xy2": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    }
+                }
+            },
+            "bswrestlerright":{
+                "type": "node",
+                "transforms":[
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0.5
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId": "rightrenderapp"
+                },
+                "children": {
+                    "planePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": -0.5,
+                            "y": -0.5
+                        },
+                        "xy2": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    }
+                }
+            },
+            "bswalllight":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -187,
+                            "y": 90,
+                            "z": 98
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bswalllightobj"
+                    ],
+                    "spotlight": {
+                        "type": "spotlight",
+                        "enabled": true,
+                        "angle": 45,
+                        "color": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0
+                        },
+                        "intensity": 20.0,
+                        "distance": 1000,
+                        "decay": 1.0,
+                        "castshadow": true,
+                        "position": {
+                            "x": 1,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "target": {
+                            "x": 187.5,
+                            "y": -60,
+                            "z": -50
+                        }
+                    }
+                }
+            },
+            "bswalllightobj":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "lampbox",
+                        "lamplighton"
+                    ]
+                }
+            },
+            "bswalllight2":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -187,
+                            "y": 90,
+                            "z": -98
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bswalllightobj"
+                    ],
+                    "spotlight": {
+                        "type": "spotlight",
+                        "enabled": true,
+                        "angle": 45,
+                        "color": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0
+                        },
+                        "intensity": 20.0,
+                        "distance": 1000,
+                        "decay": 1.0,
+                        "castshadow": true,
+                        "position": {
+                            "x": 1,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "target": {
+                            "x": 187.5,
+                            "y": -60,
+                            "z": 50
+                        }
+                    }
+                }
+            },
+            "walllightobj":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "lampbox",
+                        "lamplighton"
+                    ]
+                }
+            },
+            "walllight":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 199,
+                            "y": 98,
+                            "z": 98
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "walllightobj"
+                    ],
+                    "spotlight": {
+                        "type": "spotlight",
+                        "enabled": true,
+                        "angle": 45,
+                        "color": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0
+                        },
+                        "intensity": 20.0,
+                        "distance": 1000,
+                        "decay": 1.0,
+                        "castshadow": true,
+                        "position": {
+                            "x": -1,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "target": {
+                            "x": -180,
+                            "y": -60,
+                            "z": -50
+                        }
+                    }
+                }
+            },
+            "walllight2":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 199,
+                            "y": 98,
+                            "z": -98
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "walllightobj"
+                    ],
+                    "spotlight": {
+                        "type": "spotlight",
+                        "enabled": true,
+                        "angle": 45,
+                        "color": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0
+                        },
+                        "intensity": 20.0,
+                        "distance": 1000,
+                        "decay": 1.0,
+                        "castshadow": true,
+                        "position": {
+                            "x": -1,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "target": {
+                            "x": -180,
+                            "y": -60,
+                            "z": 50
+                        }
+                    }
+                }
+            },
+            "walllightobjback":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 180,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "lampbox",
+                        "lamplighton"
+                    ]
+                }
+            },
+            "walllight3":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 98,
+                            "z": 249.5
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList":[
+                        "walllightobjback"
+                    ],
+                    "spotlight": {
+                        "type": "spotlight",
+                        "enabled": true,
+                        "angle": 45,
+                        "color": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0
+                        },
+                        "intensity": 20.0,
+                        "distance": 1000,
+                        "decay": 1.0,
+                        "castshadow": true,
+                        "position": {
+                            "x": 1,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "target": {
+                            "x": 0,
+                            "y": -60,
+                            "z": -245
+                        }
+                    }
+                }
+            },
+            "walllight4":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 98,
+                            "z": -249.5
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList":[
+                        "lampbox",
+                        "lamplighton"
+                    ],
+                    "spotlight": {
+                        "type": "spotlight",
+                        "enabled": true,
+                        "angle": 45,
+                        "color": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0
+                        },
+                        "intensity": 20.0,
+                        "distance": 1000,
+                        "decay": 1.0,
+                        "castshadow": true,
+                        "position": {
+                            "x": 1,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "target": {
+                            "x": 0,
+                            "y": -60,
+                            "z": 245
+                        }
+                    }
+                }
+            },
+            "toplight":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 195,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "spherePrim": {
+                        "type": "sphere",
+                        "radius": 1,
+                        "slices": 10,
+                        "stacks": 10
+                    },
+                    "spotlight": {
+                        "type": "spotlight",
+                        "enabled": true,
+                        "angle": 17,
+                        "color": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0
+                        },
+                        "intensity": 500.0,
+                        "distance": 1000,
+                        "decay": 1.0,
+                        "castshadow": true,
+                        "position": {
+                            "x": 0,
+                            "y": -1,
+                            "z": 0
+                        },
+                        "target": {
+                            "x": 0,
+                            "y": -60,
+                            "z": 0
+                        }
+                    }
+                }
+            },
+            "plane": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "planePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": -0.5,
+                            "y": -0.5
+                        },
+                        "xy2": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    }
+                }
+            },
+            "cylinder": {
+                "type": "node",
+                "children": {
+                    "cylinderPrim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 1,
+                        "slices": 10,
+                        "stacks": 1,
+                        "capsclose": true
+                    }
+                }
+            },
+            "box": {
+                "type": "node",
+                "children": {
+                    "boxPrim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -0.5,
+                            "y": 0,
+                            "z": -0.5
+                        },
+                        "xyz2": {
+                            "x": 0.5,
+                            "y": 1,
+                            "z": 0.5
+                        }
+                    }
+                }
+            },
+            "sphere": {
+                "type": "node",
+                "children": {
+                    "spherePrim": {
+                        "type": "sphere",
+                        "radius": 1,
+                        "slices": 10,
+                        "stacks": 10
+                    }
+                }
+            },
+            "triangle": {
+                "type": "node",
+                "children": {
+                    "trianglePrim": {
+                        "type": "triangle",
+                        "xyz1": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -1
+                        },
+                        "xyz2": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "xyz3": {
+                            "x": 1,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
