@@ -5,7 +5,7 @@ Project made for Interactive Graphics Systems (SGI) course @ FEUP - M.EIC 2024/2
 Grades:
 - TP1: 19.5/20
 - TP2: 18.7/20
-- TP3: TBA/20
+- TP3: 19.8/20
 
 ## Developed by Group T03xG05
 | Name             | Number    | E-Mail             |
